@@ -1,4 +1,4 @@
-import Movie from "./Components/Movie";
+import Movie from "./Components/Movie/Movie";
 import { movies } from "./movieDummy";
 
 function App() {

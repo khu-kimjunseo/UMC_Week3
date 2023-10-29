@@ -34,3 +34,17 @@
   margin-left: 16px;
   margin-right: 16px;
 }
+.loginconrolwrap {
+  width: 500px;
+  display: flex;
+  align-items: center;
+}
+
+.logincontrolbutton {
+  width: 80px;
+  height: 20px;
+  margin-right: 20px;
+  border-radius: 2em;
+  background-color: white;
+  border: none;
+}

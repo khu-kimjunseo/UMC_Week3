@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import LoginControl from './LoginControl'
 
 export default function Header() {
   return (
@@ -25,6 +26,7 @@ export default function Header() {
                     </li>
                 </ul>
             </div>
+            <LoginControl></LoginControl>
         </div>
     </div>
   )

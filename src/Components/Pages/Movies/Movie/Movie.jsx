@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { React, useState } from "react";
+import PropTypes from "prop-types";
 import * as M from "./Movie.style"
 import Hover from "../Hover/Hover";
 
@@ -15,6 +16,13 @@ function Movie(props) {
             <Hover hover={isHover} title={props.title} overview={props.overview}></Hover>
         </M.MovieWrap>
     )
+}
+
+Movie.propTypes = {
+    url: PropTypes.string,
+    title: PropTypes.string,
+    rate: PropTypes.number,
+    overview: PropTypes.string
 }
 
 export default Movie

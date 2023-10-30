@@ -1,4 +1,5 @@
 import React from 'react'
+import Adimg from '../img/Adimg.svg'
 
 export default function Ad(props) {
     if (!props.ad_on){
@@ -6,7 +7,7 @@ export default function Ad(props) {
     }
     return (
     <div>
-        <img src='../img/Adimg.svg' alt='Ad'></img>
+        <img src={Adimg} alt='Ad'></img>
     </div>
     )
 }

@@ -7,7 +7,7 @@ export default function Ad(props) {
     }
     return (
     <div>
-        <img src={Adimg} alt='Ad'></img>
+        <img src={Adimg} alt='Ad' style={{'width': '100%'}}></img>
     </div>
     )
 }

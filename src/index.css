@@ -8,7 +8,7 @@
   background-color: #22254b;
 }
 
-.headerwrap{
+.headerwrap {
   height: 64px;
   max-width: 1400px;
   margin: 0 auto;
@@ -23,7 +23,7 @@
   align-items: center;
 }
 
-.linkswrap ul{
+.linkswrap ul {
   display: flex;
   list-style: none;
 }
@@ -34,7 +34,8 @@
   margin-left: 16px;
   margin-right: 16px;
 }
-.loginconrolwrap {
+
+.logincontrolwrap {
   width: 500px;
   display: flex;
   align-items: center;
@@ -47,4 +48,5 @@
   border-radius: 2em;
   background-color: white;
   border: none;
+  cursor: pointer;
 }

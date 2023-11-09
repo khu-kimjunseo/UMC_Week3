@@ -5,7 +5,7 @@ import * as M from './Movies.style'
 
 export default function Movies() {
   return (
-    <M.MoviesWrap>
+    <M.GroupWrap>
       {movies.results.map((item) => {
         return (
           <Movie key={item.id} title={item.title}
@@ -14,6 +14,6 @@ export default function Movies() {
         )
       })
       }
-    </M.MoviesWrap>
+    </M.GroupWrap>
   )
 }

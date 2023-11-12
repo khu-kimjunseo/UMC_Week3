@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const MovieWrap = styled.div`
+export const EntityWrap = styled.div`
     display: flex;
     flex-direction: column;
     width: 130px;

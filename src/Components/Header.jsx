@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import LoginControl from './LoginControl'
 
-export default function Header() {
+export default function Header(props) {
     return (
         <div className='navbar'>
             <div className='headerwrap'>
@@ -26,7 +26,7 @@ export default function Header() {
                         </li>
                     </ul>
                 </div>
-                <LoginControl></LoginControl>
+                <LoginControl isLoggedIn={props.isLoggedIn} onLoggedOut={props.onLoggedOut}></LoginControl>
             </div>
         </div>
     )

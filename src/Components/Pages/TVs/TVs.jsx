@@ -1,16 +1,16 @@
 import React from 'react'
-import Movie from './Movie/Movie'
-import { movies } from './movieDummy'
+import TV from './TV/TV'
+import { tvs } from './tvDummy'
 import * as M from '../../Group.style'
 
-export default function Movies() {
+export default function TVs() {
   return (
     <M.GroupWrap>
-      {movies.results.map((item) => {
+      {tvs.results.map((item) => {
         return (
-          <Movie key={item.id} title={item.title}
+          <TV key={item.id} title={item.name}
             rate={item.vote_average} url={item.poster_path} overview={item.overview}
-          ></Movie>
+          ></TV>
         )
       })
       }

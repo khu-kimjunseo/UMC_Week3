@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const MoviesWrap = styled.div`
+export const GroupWrap = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;

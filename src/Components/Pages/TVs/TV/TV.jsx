@@ -1,15 +1,13 @@
-import { React, useState } from "react";
+import { React } from "react";
 import PropTypes from "prop-types";
 import * as M from "../../../Entity.style"
-import Hover from "../Hover/Hover";
 import { useNavigate } from "react-router-dom";
 
-function Movie({ title, rate, url, overview }) {
-    const [isHover, setHover] = useState(false)
+function TV({ title, rate, url, overview }) {
     const navigate = useNavigate();
     const PosterURL = `https://image.tmdb.org/t/p/w1280/${url}`;
     const onClickImg = () => {
-        navigate(`/movie/${title}`, {
+        navigate(`/tv/${title}`, {
             state: {
                 id: title,
                 img: PosterURL
@@ -17,22 +15,21 @@ function Movie({ title, rate, url, overview }) {
         })
     }
     return (
-        <M.EntityWrap onClick={onClickImg} onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
+        <M.EntityWrap onClick={onClickImg}>
             <M.Poster src={PosterURL} alt={title}></M.Poster>
             <M.TextWrap>
                 <M.Title>{title}</M.Title>
                 <M.Rate>{rate}</M.Rate>
             </M.TextWrap>
-            <Hover hover={isHover} title={title} overview={overview}></Hover>
         </M.EntityWrap>
     )
 }
 
-Movie.propTypes = {
+TV.propTypes = {
     url: PropTypes.string,
     title: PropTypes.string,
     rate: PropTypes.number,
     overview: PropTypes.string
 }
 
-export default Movie
+export default TV

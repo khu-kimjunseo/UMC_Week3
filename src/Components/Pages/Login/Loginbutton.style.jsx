@@ -8,8 +8,8 @@ export const Login = styled.button`
     border-radius: 20px;
     font-size: 18px;
     color: white;
-    background-color: ${(props) => props.active ? '#022540' : '#DADADA'};
-    cursor: ${(props) => props.active ? 'pointer' : 'default'};
+    background-color: #022540;
+    cursor: pointer;
 `
 
 export const Form = styled.form`

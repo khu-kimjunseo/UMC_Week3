@@ -1,11 +1,9 @@
-import { React, useState } from "react";
+import { React } from "react";
 import PropTypes from "prop-types";
 import * as M from "../../../Entity.style"
-import Hover from "../Hover/Hover";
 import { useNavigate } from "react-router-dom";
 
 function Movie({ title, rate, url, overview }) {
-    const [isHover, setHover] = useState(false)
     const navigate = useNavigate();
     const PosterURL = `https://image.tmdb.org/t/p/w1280/${url}`;
     const onClickImg = () => {
@@ -17,13 +15,16 @@ function Movie({ title, rate, url, overview }) {
         })
     }
     return (
-        <M.EntityWrap onClick={onClickImg} onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
+        <M.EntityWrap onClick={onClickImg}>
+            <M.Hovering>
+                <M.HoverTitle>{title}</M.HoverTitle>
+                <M.Overview>{overview}</M.Overview>
+            </M.Hovering>
             <M.Poster src={PosterURL} alt={title}></M.Poster>
             <M.TextWrap>
                 <M.Title>{title}</M.Title>
                 <M.Rate>{Math.round(rate*10)/10}</M.Rate>
             </M.TextWrap>
-            {/* <Hover hover={isHover} title={title} overview={overview}></Hover> */}
         </M.EntityWrap>
     )
 }

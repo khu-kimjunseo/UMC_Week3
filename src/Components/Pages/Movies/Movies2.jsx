@@ -1,10 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Movie from './Movie/Movie'
-// import { movies } from './movieDummy'
-import { Provider, useDispatch, useSelector } from 'react-redux'
 import * as M from '../../Group.style'
 import axios from 'axios'
-import store from '../../../store'
 import styled from 'styled-components'
 
 export default function Movies2() {

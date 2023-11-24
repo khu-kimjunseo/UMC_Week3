@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Provider, useSelector } from "react-redux"
+import React, { useEffect, useState } from "react";
+import { Provider, useDispatch, useSelector } from "react-redux"
 import { BrowserRouter, Route, RouterProvider, Routes } from "react-router-dom";
 import Movies from "./Components/Pages/Movies/Movies";
 import Celebrity from "./Components/Pages/Celebrity/Celebrity";
@@ -11,6 +11,9 @@ import MovieDetail from "./Components/Pages/Movies/Movie/MovieDetail";
 import Login from "./Components/Pages/Login/Login";
 import TVDetail from "./Components/Pages/TVs/TV/TVDetail";
 import store from "./store";
+import { setMovies, setPage } from "./Components/Pages/Movies/MovieSlice";
+import axios from 'axios'
+import Movies2 from "./Components/Pages/Movies/Movies2";
 
 function App() {
     return (
@@ -22,6 +25,7 @@ function App() {
                         <Route path="/" element={<Home></Home>}></Route>
                         <Route path="/movies" element={<Movies></Movies>}></Route>
                         <Route path="/movie/:title" element={<MovieDetail></MovieDetail>}></Route>
+                        <Route path="/movies2" element={<Movies2></Movies2>}></Route>
                         <Route path="/celebrity" element={<Celebrity></Celebrity>}></Route>
                         <Route path="/tv" element={<TV></TV>}></Route>
                         <Route path="/tv/:title" element={<TVDetail></TVDetail>}></Route>

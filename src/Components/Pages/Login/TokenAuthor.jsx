@@ -7,7 +7,7 @@ export default function TokenAuthor() {
     const userToken = useSelector(state => state.login.token);
     const authorToken = async () => {
         console.log('Authorizing');
-        const endpoint = 'http://localhost:5000/user/payload';
+        const endpoint = 'http://localhost:8000/user/payload';
         try {
             const res = await axios.get(endpoint, {
                 headers: {

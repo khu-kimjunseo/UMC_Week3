@@ -21,9 +21,9 @@ function Movie({ title, rate, url, overview }) {
             <M.Poster src={PosterURL} alt={title}></M.Poster>
             <M.TextWrap>
                 <M.Title>{title}</M.Title>
-                <M.Rate>{rate}</M.Rate>
+                <M.Rate>{Math.round(rate*10)/10}</M.Rate>
             </M.TextWrap>
-            <Hover hover={isHover} title={title} overview={overview}></Hover>
+            {/* <Hover hover={isHover} title={title} overview={overview}></Hover> */}
         </M.EntityWrap>
     )
 }

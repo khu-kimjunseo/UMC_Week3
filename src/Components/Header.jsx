@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import LoginControl from './Pages/Login/LoginControl'
-import { Provider } from 'react-redux'
+import { Provider } from "react-redux"
 import store from '../store'
 import TokenAuthor from './Pages/Login/TokenAuthor'
 
@@ -21,6 +21,9 @@ export default function Header(props) {
                         <ul>
                             <li>
                                 <Link to='/movies' className='link'>영화</Link>
+                            </li>
+                            <li>
+                                <Link to='/movies2' className='link'>영화2</Link>
                             </li>
                             <li>
                                 <Link to='/tv' className='link'>TV 프로그램</Link>

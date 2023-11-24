@@ -20,7 +20,7 @@ export default function Login(props) {
             console.log('Log in');
             setFetching(true)
             setTimeout(() => setFetching(false), 1500)
-            let endpoint = 'http://localhost:5000/user/login';
+            let endpoint = 'http://localhost:8000/user/login';
             const requestBody = {
                 id: userId,
                 pw: userPw,
@@ -32,7 +32,7 @@ export default function Login(props) {
             })
             console.log(res.data);
             dispatch(setToken(res.data.result.AccessToken));
-
+            window.localStorage.setItem('token', res.data.result.AccessToken)
             dispatch(setIsLogin(true));
             navigate('/');
         }

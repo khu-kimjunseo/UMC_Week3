@@ -9,6 +9,10 @@ export const EntityWrap = styled.div`
 
     position: relative;
     overflow: hidden;
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.7);
+    }
 `;
 
 export const Poster = styled.img`

@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { Provider, useDispatch, useSelector } from "react-redux"
-import { BrowserRouter, Route, RouterProvider, Routes } from "react-router-dom";
+import React from "react";
+import { Provider } from "react-redux"
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Movies from "./Components/Pages/Movies/Movies";
 import Celebrity from "./Components/Pages/Celebrity/Celebrity";
 import Home from "./Components/Pages/Home/Home";
@@ -11,8 +11,6 @@ import MovieDetail from "./Components/Pages/Movies/Movie/MovieDetail";
 import Login from "./Components/Pages/Login/Login";
 import TVDetail from "./Components/Pages/TVs/TV/TVDetail";
 import store from "./store";
-import { setMovies, setPage } from "./Components/Pages/Movies/MovieSlice";
-import axios from 'axios'
 import Movies2 from "./Components/Pages/Movies/Movies2";
 
 function App() {

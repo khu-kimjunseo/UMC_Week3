@@ -28,6 +28,7 @@ export default function Movies2() {
     console.log(page);
     window.scrollTo(0, 0)
     fetchData();    
+    // eslint-disable-next-line
   }, [page])
 
   //Infinite Scroll

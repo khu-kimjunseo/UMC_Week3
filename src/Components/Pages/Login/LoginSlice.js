@@ -4,6 +4,7 @@ const initialState = {
     userId: null,
     userPw: null,
     token: null,
+    userName: null,
     isLogin: false,
 };
 
@@ -17,6 +18,9 @@ const loginSlice = createSlice({
         setPw: (state, action) => {
             state.userPw = action.payload;
         },
+        setName: (state, action) => {
+            state.userName = action.payload;
+        },
         setToken: (state, action) => {
             state.token = action.payload;
         },
@@ -29,6 +33,7 @@ const loginSlice = createSlice({
 export const {
     setID,
     setPw,
+    setName,
     setToken,
     setIsLogin,
 } = loginSlice.actions;

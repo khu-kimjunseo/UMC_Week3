@@ -26,6 +26,7 @@ export default function Movies() {
   }
   useEffect(() => {
     fetchData();
+    // eslint-disable-next-line
   }, [page])
 
   //Infinite Scroll

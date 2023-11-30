@@ -12,6 +12,7 @@ import Login from "./Components/Pages/Login/Login";
 import TVDetail from "./Components/Pages/TVs/TV/TVDetail";
 import store from "./store";
 import Movies2 from "./Components/Pages/Movies/Movies2";
+import KakaoRedirect from "./Components/Pages/Login/KakaoRedirect";
 
 function App() {
     return (
@@ -28,6 +29,7 @@ function App() {
                         <Route path="/tv" element={<TV></TV>}></Route>
                         <Route path="/tv/:title" element={<TVDetail></TVDetail>}></Route>
                         <Route path='/login' element={<Login></Login>}></Route>
+                        <Route path="/oauth" element={<KakaoRedirect></KakaoRedirect>}></Route>
                         <Route path="/*" element={<NotFound></NotFound>}></Route>
                     </Routes>
                 </BrowserRouter>

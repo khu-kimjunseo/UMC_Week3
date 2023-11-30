@@ -30,6 +30,7 @@ export const Label = styled.label`
     opacity: ${(props) => props.valid ? 0 : 1}
 `
 export const Input = styled.input`
+    padding: 20px;
     height: 40px;
     border-radius: 10px;
     border: solid 3px #cccccc;
@@ -37,4 +38,13 @@ export const Input = styled.input`
         border-color: black;
         outline: none;
     }
+`
+
+export const KakaoBtn = styled(Login)`
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    width: 50%;
+    background-color: rgb(250, 233, 78);
+    color: black;
 `
